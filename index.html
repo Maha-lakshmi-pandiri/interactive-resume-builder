@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Interactive Resume Builder</h1>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <form id="resume-form">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <textarea id="summary" placeholder="Profile Summary"></textarea>
+
+    <div id="education-section">
+      <h3>Education</h3>
+      <button type="button" onclick="addEducation()">Add Education</button>
+    </div>
+
+    <div id="experience-section">
+      <h3>Experience</h3>
+      <button type="button" onclick="addExperience()">Add Experience</button>
+    </div>
+
+    <div>
+      <h3>Skills</h3>
+      <label><input type="checkbox" value="HTML">HTML</label>
+      <label><input type="checkbox" value="CSS">CSS</label>
+      <label><input type="checkbox" value="JavaScript">JavaScript</label>
+    </div>
+
+    <button type="button" onclick="clearForm()">Clear Form</button>
+  </form>
+
+  <div id="resume-preview">
+    <h2>Live Resume Preview</h2>
+    <p id="preview-name"></p>
+    <p id="preview-email"></p>
+    <p id="preview-phone"></p>
+    <p id="preview-summary"></p>
+    <ul id="preview-education"></ul>
+    <ul id="preview-experience"></ul>
+    <p id="preview-skills"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
